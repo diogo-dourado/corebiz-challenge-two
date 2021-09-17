@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Salários</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="scripts/main.js"></script>
+
+</head>
+<body page='lista'>
+    <h1>Registro de salário de funcionários</h1>
+    <div id="listaRegistros">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Vendedor</th>
+                    <th>Salário fixo</th>
+                    <th>Valor de vendas desse mês</th>
+                    <th>Salário mensal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="listaRegistrosBody"></tbody>
+
+        </table>
+        <br>
+        <div>
+            <button onclick="vizualizar('cadastro', true)">Novo registro</button>
+        </div>
+
+    </div>
+
+    <form id="cadastroRegistros">
+
+        <div class="label">
+            <div>ID</div>
+            <div>
+                <input id="id" type="number" readonly>
+            </div>
+        </div>
+
+        <div class="label">
+            <div>Nome do vendedor</div>
+            <div>
+                <input id="nome" type="text">
+            </div>
+        </div>
+
+        <div class="label">
+            <div>Salário fixo</div>
+            <div>
+                <input id="salario" type="number">
+            </div>
+        </div>
+
+        <div class="label">
+            <div>Valor de vendas desse mês <span>&nbsp;(ganha comissão de 15% sobre suas vendas efetuada)</span> </div>
+            <div>
+                <input id="vendas" type="number">
+            </div>
+        </div>
+
+        <div>
+            <button id="enviar" onclick="submeter()" type="button">Salvar</button>
+            <button onclick="vizualizar('lista')" class="vermelho" type="button">Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
